@@ -1,0 +1,13 @@
+{
+  "name": "datasets-graphql",
+  "version": "0.1.0",
+  "description": "A serverless GraphQL gateway for Mapbox Datasets API.",
+  "main": "datasets-graphql.js",
+  "license": "MIT",
+  "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.9.0",
+    "apollo-server-lambda": "^2.9.9",
+    "graphql": "^14.5.8"
+  },
+  "author": "@piducancore"
+}
