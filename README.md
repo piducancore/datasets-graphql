@@ -4,7 +4,7 @@ A serverless GraphQL gateway for [Mapbox Datasets API](https://docs.mapbox.com/a
 
 ## Try it live!
 
-Check the GraphQL Playground [here](https://mapbox-datasets.netlify.app/.netlify/functions/graphql) to learn about all the available API methods.
+Check the GraphQL Playground [here](https://mapbox-datasets.netlify.app/.netlify/functions/datasets) to learn about all the available API methods.
 
 ## Local development
 
@@ -14,4 +14,4 @@ Make sure you have the [`Netlify CLI`](https://docs.netlify.com/cli/get-started/
 netlify dev
 ```
 
-You can check your local GraphQL Playground at `http://localhost:8888/.netlify/functions/graphql`.
+You can check your local GraphQL Playground at `http://localhost:8888/.netlify/functions/datasets`.

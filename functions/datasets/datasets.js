@@ -1,9 +1,9 @@
-const { join } = require("path");
+const path = require("path");
 const { ApolloServer } = require("apollo-server-lambda");
 const { importSchema } = require("graphql-import");
 const { resolvers } = require("./resolvers");
 
-const typeDefs = importSchema(join(__dirname, "schema.graphql"));
+const typeDefs = importSchema(path.join(__dirname, "schema.graphql"));
 
 const server = new ApolloServer({
   typeDefs,
