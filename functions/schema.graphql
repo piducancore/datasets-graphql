@@ -1,0 +1,58 @@
+scalar Coordinates
+scalar Bounds
+
+type Dataset {
+  owner: String
+  id: ID!
+  name: String
+  description: String
+  created: String
+  modified: String
+  features: Int
+  size: Int
+  bounds: Bounds
+}
+
+type FeatureProps {
+  name: String
+  description: String
+}
+
+type FeatureGeometry {
+  coordinates: Coordinates!
+  type: String!
+}
+
+type Feature {
+  type: String!
+  properties: FeatureProps
+  geometry: FeatureGeometry
+  id: ID!
+}
+
+type FeatureCollection {
+  type: String!
+  features: [Feature]
+}
+
+type Query {
+  listDatasets: [Dataset]
+  listFeatures(datasetId: String!): FeatureCollection
+  getMetadata(datasetId: String!): Dataset
+  getFeature(datasetId: String!, featureId: String!): Feature
+}
+
+type Mutation {
+  createDataset(name: String!, description: String): Dataset
+  deleteDataset(id: String!): String
+  updateMetadata(datasetId: String!, name: String, description: String): Dataset
+  putFeature(
+    datasetId: String!
+    featureId: String
+    name: String!
+    description: String
+    lon: Float!
+    lat: Float!
+  ): Feature
+  deleteFeature(datasetId: String!, featureId: String!): String
+}
